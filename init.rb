@@ -1,0 +1,2 @@
+require 'token_generator'
+
