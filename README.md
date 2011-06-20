@@ -1,7 +1,8 @@
-TokenGenerator
-==============
+# Token Generator
 
-Mix-in for classes that needs to have a token generated using MD5. You can set the length of the token 
+(Original plugin by David Heinermeier Hansson, Marcel Molina Jr.)
+
+Mix-in for classes that needs to have a token generated using SecureRandom class. You can set the length of the token 
 and provide it with an optional block that'll check the validity of the generated token (usually whether it's
 already taken or not).
 
@@ -27,3 +28,4 @@ Examples:
   end
 
 Copyright (c) 2005 David Heinemeier Hansson, Marcel Molina Jr. released under the MIT license
+
