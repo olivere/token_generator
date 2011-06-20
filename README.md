@@ -12,20 +12,21 @@ validity (if a duplicate exists, generate another token).
 
 Examples:
 
-  class Invitation < ActiveRecord::Base
-    include TokenGenerator
-    before_create :set_token
-  end
+    class Invitation < ActiveRecord::Base
+      include TokenGenerator
+      before_create :set_token
+    end
 
-  class ImperialInvitation < ActiveRecord::Base
-    include TokenGenerator
-    before_create :set_token
+    class ImperialInvitation < ActiveRecord::Base
+      include TokenGenerator
+      before_create :set_token
     
-    private
-      def set_token
-        self.token = generate_token { |token| complies_to_imperial_standards?(token) }
-      end
-  end
+      private
+
+        def set_token
+          self.token = generate_token { |token| complies_to_imperial_standards?(token) }
+        end
+    end
 
 Copyright (c) 2005 David Heinemeier Hansson, Marcel Molina Jr. released under the MIT license
 
